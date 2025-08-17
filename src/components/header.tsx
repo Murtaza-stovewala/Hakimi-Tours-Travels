@@ -11,11 +11,11 @@ import { cn } from "@/lib/utils";
 
 const navLinks = [
   { href: "/", label: "Home" },
+  { href: "/about", label: "About Us" },
   { href: "/packages", label: "Packages" },
+  { href: "/car-booking", label: "Car Booking" },
   { href: "/schedule", label: "Schedule" },
   { href: "/gallery", label: "Gallery" },
-  { href: "/car-booking", label: "Car Booking" },
-  { href: "/about", label: "About Us" },
   { href: "/contact", label: "Contact" },
 ];
 
