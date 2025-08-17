@@ -1,6 +1,35 @@
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { CheckCircle } from 'lucide-react';
+import TeamCarousel from '@/components/team-carousel';
+
+
+const videoItems = [
+    {
+      id: '1',
+      name: 'Our Founder\'s Story',
+      role: 'Founder Interview',
+      image: 'https://placehold.co/400x600.png',
+    },
+    {
+      id: '2',
+      name: 'Community Service Initiative',
+      role: 'Social Responsibility',
+      image: 'https://placehold.co/400x600.png',
+    },
+     {
+      id: '3',
+      name: 'A Pilgrim\'s Journey',
+      role: 'Customer Testimonial',
+      image: 'https://placehold.co/400x600.png',
+    },
+     {
+      id: '4',
+      name: 'Behind the Scenes',
+      role: 'A Day at Hakimi Travels',
+      image: 'https://placehold.co/400x600.png',
+    },
+  ];
 
 export default function AboutPage() {
   return (
@@ -57,7 +86,26 @@ export default function AboutPage() {
                 </Card>
             </div>
         </div>
+
+         <div className="mt-16 md:mt-24">
+             <TeamCarousel 
+                members={videoItems} 
+                infoPosition='bottom' 
+                title="In the News"
+                titleClassName='text-3xl md:text-4xl font-bold text-center text-primary'
+                titleSize='lg'
+                titleColor='hsl(var(--primary))'
+                showDots={true}
+                cardHeight={480}
+                cardWidth={280}
+                autoPlay={3000}
+                visibleCards={1}
+            />
+        </div>
+
       </div>
     </div>
   );
 }
+
+    
